@@ -11,7 +11,7 @@ surface = pg.display.set_mode(RES)
 clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
-#font = pg.font.SysFo
+#font = pg.font.SysFont('ms mincho',)
 #gre
 
 while True:
