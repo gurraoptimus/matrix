@@ -11,8 +11,8 @@ surface = pg.display.set_mode(RES)
 clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
-#font = pg.font.SysFont('ms mincho',FONT_SIZE, bold=True)
-#green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
+font = pg.font.SysFont('ms mincho',FONT_SIZE, bold=True)
+green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
 
 while True:
     surface.fill(pg.Color('black'))
