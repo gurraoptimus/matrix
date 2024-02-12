@@ -1,7 +1,15 @@
 import os 
 import pygame as pg
-# from randomm import choice, randrange
+from randomm import choice, randrange
 
+
+class Symbol:
+    def __init__(self, x, y):
+        self.x, self.y = x, y
+        self.value = choice(green_katakana)
+
+        def draw(self):
+            surface.blit
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 400, 600
 FONT_SIZE = 40
