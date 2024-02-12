@@ -12,7 +12,7 @@ clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 
-while true:
+while True:
     surface.fill(pg.Color('black'))
 
     [exit() for i in pg.event.get()if i.type == pg.quit]
