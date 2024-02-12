@@ -11,7 +11,9 @@ surface = pg.display.set_mode(RES)
 clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
-#font =
+#font = pg.font.SysFo
+#gre
+
 while True:
     surface.fill(pg.Color('green'))
 
