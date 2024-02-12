@@ -3,7 +3,7 @@ import pygame as pg
 # from randomm import choice, randrange
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
-RES = WIDTH, HEIGHT =1600, 900
+RES = WIDTH, HEIGHT =400, 600
 FONT_SIZE = 40
 
 pg.init()
