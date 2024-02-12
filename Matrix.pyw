@@ -17,6 +17,6 @@ katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 while True:
     surface.fill(pg.Color('green'))
 
-    [exit() for i in pg.event.get()if i.type == pg.quit]
+    [exit() for i in pg.event.get()if i.type == pg.QUIT]
     pg.display.flip()
     clock.tick(60)
