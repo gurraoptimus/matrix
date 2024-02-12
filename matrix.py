@@ -7,4 +7,7 @@ RES = WIDTH, HEIGHT =1600, 900
 FONT_SIZE = 40
 
 pg.init()
-surface = pg
+surface = pg.display.set_mode(RES)
+clock = pg.time.Clock()
+
+katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
