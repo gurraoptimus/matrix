@@ -18,11 +18,11 @@ class Symbol:
         surface.blit(self.value, (self.x, self.y))
 
 
-class SymbolColum:
+class SymbolColumn:
     def __init__(self, x, y):
         self.colum_height = randrange(8, 18)
         self.speed = randrange(2, 6)
-        self.symbols = [Symbol(x, i, self.speed)for i in range(y, y - FONT_SIZE * self.colum_height, -FONT_SIZE)]
+        self.symbols = [Symbol(x, i, self.speed)for i in range(y, y - FONT_SIZE * self.column_height, -FONT_SIZE)]
 
     def draw(self):
         [symbol.draw()for symbol in self.symbols]
@@ -39,12 +39,12 @@ katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho', FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
 
-symbol = Symbol(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2, speed=3)
+symbol_column = SymbolColumn(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2)
 while True:
     surface.fill(pg.Color('black'))
 
-    symbol.draw()
+    symbol_column.draw()
 
-    [exit() for i in pg.event.get()if i.type == pg.QUIT]
+    [exit() for i in pg.event.get() if i.type == pg.QUIT]
     pg.display.flip()
     clock.tick(60)
