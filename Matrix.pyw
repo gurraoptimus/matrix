@@ -22,8 +22,11 @@ katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho',FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
 
+symbol = Symbol(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2)
 while True:
     surface.fill(pg.Color('black'))
+
+symbol.draw()
 
     [exit() for i in pg.event.get()if i.type == pg.QUIT]
     pg.display.flip()
