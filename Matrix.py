@@ -17,6 +17,12 @@ class Symbol:
         self.y = self.y + self.speed if self.y < HEIGHT else -FONT_SIZE
         surface.blit(self.value, (self.x, self.y))
 
+
+class SymbolColum:
+    def __init__(self, x, y):
+        self.colum_height = randrange(8, 18)
+        self.speed = randrange(2, 6)
+
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
 FONT_SIZE = 140
