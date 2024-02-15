@@ -4,8 +4,9 @@ from random import choice, randrange
 
 
 class Symbol:
-    def __init__(self, x, y):
+    def __init__(self, x, y, speed):
         self.x, self.y = x, y
+        self.speed = speed
         self.value = choice(green_katakana)
         self.interval = randrange(5, 30)
 
@@ -13,6 +14,7 @@ class Symbol:
         frames = pg.time.get_ticks()
         if not frames % self.interval:
             self.value = choice(green_katakana)
+        self
         surface.blit(self.value, (self.x, self.y))
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
