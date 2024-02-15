@@ -10,7 +10,10 @@ class Symbol:
         self.interval = randrange(5, 30)
 
     def draw(self):
-            surface.blit(self.value, (self.x, self.y))
+        frames = pg.time.get_ticks()
+        if not frames % self.interval:
+            self.value = choice(green_katakana)
+        surface.blit(self.value, (self.x, self.y))
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
