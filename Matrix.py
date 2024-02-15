@@ -29,7 +29,7 @@ class SymbolColumn:
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
-FONT_SIZE = 140
+FONT_SIZE = 40
 
 pg.init()
 surface = pg.display.set_mode(RES)
