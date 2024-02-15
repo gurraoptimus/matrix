@@ -7,6 +7,7 @@ class Symbol:
     def __init__(self, x, y):
         self.x, self.y = x, y
         self.value = choice(green_katakana)
+        self.interval = randrange(5, 30)
 
         def draw(self):
             surface.blit(self.value,(self.x, self.y))
