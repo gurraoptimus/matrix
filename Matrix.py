@@ -31,6 +31,6 @@ while True:
 
     symbol.draw()
 
-        [exit() for i in pg.event.get()if i.type == pg.QUIT]
-        pg.display.flip()
-        clock.tick(60)
+    [exit() for i in pg.event.get()if i.type == pg.QUIT]
+    pg.display.flip()
+    clock.tick(60)
