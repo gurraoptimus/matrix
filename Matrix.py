@@ -10,6 +10,8 @@ class Symbol:
 
         def draw(self):
             surface.blit(self.value,(self.x, self.y))
+
+            
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 400, 600
 FONT_SIZE = 140
