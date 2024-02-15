@@ -9,9 +9,8 @@ class Symbol:
         self.value = choice(green_katakana)
         self.interval = randrange(5, 30)
 
-        def draw(self):
-            surface.blit(self.value,(self.x, self.y))
-
+    def draw(self):
+            surface.blit(self.value, (self.x, self.y))
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 1600, 900
