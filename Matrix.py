@@ -1,6 +1,6 @@
 import os 
 import pygame as pg
-from randomm import choice, randrange
+from random import choice, randrange
 
 
 class Symbol:
