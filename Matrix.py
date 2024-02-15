@@ -14,7 +14,7 @@ class Symbol:
         frames = pg.time.get_ticks()
         if not frames % self.interval:
             self.value = choice(green_katakana)
-        self
+        self.y = self.y + self.speed if self.y < HEIGHT else -FONT_SIZE
         surface.blit(self.value, (self.x, self.y))
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
@@ -29,7 +29,7 @@ katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho',FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
 
-symbol = Symbol(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2)
+symbol = Symbol(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2, speed=3)
 while True:
     surface.fill(pg.Color('black'))
 
