@@ -26,7 +26,7 @@ symbol = Symbol(WIDTH // 2 - FONT_SIZE // 2, HEIGHT // 2 - FONT_SIZE // 2)
 while True:
     surface.fill(pg.Color('black'))
 
-symbol.draw()
+    symbol.draw()
 
     [exit() for i in pg.event.get()if i.type == pg.QUIT]
     pg.display.flip()
