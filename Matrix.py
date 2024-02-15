@@ -13,7 +13,7 @@ class Symbol:
             surface.blit(self.value, (self.x, self.y))
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
-RES = WIDTH, HEIGHT = 900, 600
+RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
 FONT_SIZE = 140
 
 pg.init()
