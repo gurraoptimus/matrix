@@ -8,7 +8,7 @@ class Symbol:
         self.x, self.y = x, y
         self.speed = speed
         self.value = choice(green_katakana)
-        self.interval = randrange(5,30)
+        self.interval = randrange(5, 30)
 
     def draw(self):
         frames = pg.time.get_ticks()
