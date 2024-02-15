@@ -15,7 +15,7 @@ class Symbol:
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 1600, 900
-FONT_SIZE = 40
+FONT_SIZE = 140
 
 pg.init()
 surface = pg.display.set_mode(RES)
@@ -31,6 +31,6 @@ while True:
 
     symbol.draw()
 
-    [exit() for i in pg.event.get()if i.type == pg.QUIT]
-    pg.display.flip()
-    clock.tick(60)
+        [exit() for i in pg.event.get()if i.type == pg.QUIT]
+        pg.display.flip()
+        clock.tick(60)
