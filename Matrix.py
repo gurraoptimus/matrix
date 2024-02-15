@@ -22,6 +22,10 @@ class SymbolColum:
     def __init__(self, x, y):
         self.colum_height = randrange(8, 18)
         self.speed = randrange(2, 6)
+        self.symbols = [Symbol(x, i, self.speed)for i in range(y, y - FONT_SIZE * self.colum_height, -FONT_SIZE)]
+
+    def draw(self):
+        [symbol.draw()for symbol in self.symbols]
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
