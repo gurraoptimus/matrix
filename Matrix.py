@@ -30,7 +30,7 @@ class SymbolColumn:
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
 FONT_SIZE = 40
-alpha_value = 50
+alpha_value = 0
 
 pg.init()
 screen = pg.display.set_mode(RES)
@@ -52,7 +52,10 @@ while True:
     [symbol_column.draw() for symbol_column in symbol_columns]
 
 
-
+    if not pg.time.get_ticks() % 20 and alpha_value < 170:
+        alpha_value += 3
+        surface.set_alpha(alpha_value)
+    
     [exit() for i in pg.event.get() if i.type == pg.QUIT]
     pg.display.flip()
     clock.tick(60)
