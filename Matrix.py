@@ -30,9 +30,11 @@ class SymbolColumn:
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
 FONT_SIZE = 40
+alpha_value = 50
 
 pg.init()
 screen = pg.display.set_mode(RES)
+surface.set_alpha(alpha_value)
 surface = pg.surface(RES)
 clock = pg.time.Clock()
 
@@ -44,6 +46,7 @@ lightgreen_katakana = [font.render(char, True, pg.Color('lightgreen')) for char 
 symbol_columns = [SymbolColumn(x, randrange(-HEIGHT, 0)) for x in range(0, WIDTH, FONT_SIZE)]
 
 while True:
+    screen.blit(surface, (0, 0))
     surface.fill(pg.Color('black'))
 
     [symbol_column.draw() for symbol_column in symbol_columns]
