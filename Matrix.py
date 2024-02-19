@@ -34,7 +34,7 @@ alpha_value = 0
 
 pg.init()
 screen = pg.display.set_mode(RES)
-surface = pg.surface(RES)
+#surface = pg.surface(RES)
 surface.set_alpha(alpha_value)
 clock = pg.time.Clock()
 
