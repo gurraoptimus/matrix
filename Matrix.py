@@ -33,8 +33,8 @@ FONT_SIZE = 40
 alpha_value = 0
 
 pg.init()
+surface = pg.surface(RES)
 screen = pg.display.set_mode(RES)
-#surface = pg.surface(RES)
 surface.set_alpha(alpha_value)
 clock = pg.time.Clock()
 
