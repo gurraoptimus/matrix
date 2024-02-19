@@ -39,7 +39,7 @@ katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho', FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
 
-symbol_columns = [SymbolColumn(x, 0) for x in range(0, WIDTH, FONT_SIZE)]
+symbol_columns = [SymbolColumn(x,randrange(-HEIGHT, 0)) for x in range(0, WIDTH, FONT_SIZE)]
 
 while True:
     surface.fill(pg.Color('black'))
