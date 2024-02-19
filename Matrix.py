@@ -10,10 +10,10 @@ class Symbol:
         self.value = choice(green_katakana)
         self.interval = randrange(5, 30)
 
-    def draw(self):
+    def draw(self, color):
         frames = pg.time.get_ticks()
         if not frames % self.interval:
-            self.value = choice(green_katakana)
+            self.value = choice(green_katakana if color == 'green' else lightgreen_katakana)
         self.y = self.y + self.speed if self.y < HEIGHT else -FONT_SIZE
         surface.blit(self.value, (self.x, self.y))
 
@@ -38,6 +38,7 @@ clock = pg.time.Clock()
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho', FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
+lightgreen_katakana = [font.render(char, True, pg.Color('lightgreen')) for char in katakana]
 
 symbol_columns = [SymbolColumn(x, randrange(-HEIGHT, 0)) for x in range(0, WIDTH, FONT_SIZE)]
 
