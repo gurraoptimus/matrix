@@ -32,7 +32,8 @@ RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
 FONT_SIZE = 40
 
 pg.init()
-surface = pg.display.set_mode(RES)
+screen = pg.display.set_mode(RES)
+surface = pg.surface(RES)
 clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
