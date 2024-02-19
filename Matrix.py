@@ -25,7 +25,7 @@ class SymbolColumn:
         self.symbols = [Symbol(x, i, self.speed)for i in range(y, y - FONT_SIZE * self.column_height, -FONT_SIZE)]
 
     def draw(self):
-        [symbol.draw('green') if i else symbol.draw('lightgreen') for i, symbol in enumerate(self.symbol)]
+        [symbol.draw('green') if i else symbol.draw('lightgreen') for i, symbol in enumerate(self.symbols)]
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 RES = WIDTH, HEIGHT = 900, 600 #DISPLAY SIZE
