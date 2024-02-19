@@ -37,7 +37,7 @@ clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
 font = pg.font.SysFont('ms mincho', FONT_SIZE, bold=True)
-green_katakana = [font.render(char, True, pg.Color('green')) for char in katakana]
+green_katakana = [font.render(char, True, (0, randrange(160, 256),0)) for char in katakana]
 lightgreen_katakana = [font.render(char, True, pg.Color('lightgreen')) for char in katakana]
 
 symbol_columns = [SymbolColumn(x, randrange(-HEIGHT, 0)) for x in range(0, WIDTH, FONT_SIZE)]
