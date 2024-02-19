@@ -34,8 +34,8 @@ alpha_value = 50
 
 pg.init()
 screen = pg.display.set_mode(RES)
-surface.set_alpha(alpha_value)
 surface = pg.surface(RES)
+surface.set_alpha(alpha_value)
 clock = pg.time.Clock()
 
 katakana =[chr(int('0x30a0', 16) + i)for i in range(96)]
