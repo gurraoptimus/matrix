@@ -39,7 +39,7 @@ surface.set_alpha(alpha_value)
 clock = pg.time.Clock()
 
 katakana = [chr(int('0x30a0', 16) + i)for i in range(96)]
-font = pg.font.SysFont('MS Mincho', FONT_SIZE, bold=True)
+font = pg.font.Font(font/"MS Mincho.ttf", FONT_SIZE, bold=True)
 green_katakana = [font.render(char, True, (40, randrange(160, 256),40)) for char in katakana]
 lightgreen_katakana = [font.render(char, True, pg.Color('lightgreen')) for char in katakana]
 
