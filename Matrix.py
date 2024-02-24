@@ -28,7 +28,7 @@ class SymbolColumn:
         [symbol.draw('green') if i else symbol.draw('lightgreen') for i, symbol in enumerate(self.symbols)]
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
-RES = WIDTH, HEIGHT = 1600, 1000 #DISPLAY SIZE
+RES = WIDTH, HEIGHT = 1000, 1000 #DISPLAY SIZE
 FONT_SIZE = 40
 alpha_value = 0
 
